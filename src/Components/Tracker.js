@@ -3,9 +3,8 @@ import axios from 'axios'
 import Pagination from './Pagination'
 import { AiOutlineStar} from 'react-icons/ai';
 import {CiCircleRemove } from 'react-icons/ci';
+// import { BsBookmarkCheck } from 'react-icons/bs';
 import Info from './Info';
-// import CartList from './CartList';
-// import Info from './Info'
 function Tracker() {
 
     const [city, setCity] = useState([])
@@ -67,6 +66,7 @@ function Tracker() {
         cartListCopy = cartListCopy.filter((cartCity)=> cartCity.id!==el.id);
         setCart(cartListCopy)
     }
+    
 
     const cartListedCity = cart.map((el)=>{
         return (
@@ -79,12 +79,40 @@ function Tracker() {
         )
     })
 
+    // const ClickBookMark =()=>{
+    //     setIsOpen(!isOpen)
+    //     console.log('OPEN')
+    //   }
+    
 
 
 
-    return (
+
+    return ( 
+        <>
+        
         <div className='app-container'>
+            {/* {cartListedCity} */}
+            {/* <nav >
+      <header >
+        <p >C</p>
+        <img src='https://t.pimg.jp/064/964/944/5/64964944.jpg' alt='covid' />
+        <p className='vid'>VID-19 TRACKER</p>
+      </header>
+      <div className='cart'>
+      <BsBookmarkCheck 
+      className='bookmark'
+      onClick={ClickBookMark}
+      />
+      <button className='signin'>Sign In</button>
+
+      </div>
+      <div className={`menu ${isOpen ? 'active' : 'inactive'}`}>
+          <div className='openList'>
             {cartListedCity}
+          </div>
+        </div>
+      </nav> */}
             {/* <header >
                 <p >C</p> 
                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG1XcPaj91iLWlemXFeVZpM-P2XFPOiAmphYTd0HLnkgRt7S9-IlAK9MfxiCoYHeBUBtc&usqp=CAU' alt='covid' />
@@ -202,10 +230,12 @@ function Tracker() {
                 {/* <Info cartListedCity={cartListedCity}/> */}
 
             </div>
-                    {/* <Info cartListedCity={cartListedCity}/> */}
-
+            {/* <Info cartListedCity={cartListedCity}
+            /> */}
+                            
 
         </div>
+        </>
     )
 }
 

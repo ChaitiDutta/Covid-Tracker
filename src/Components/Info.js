@@ -1,16 +1,30 @@
-import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BsBookmarkCheck } from 'react-icons/bs';
 import Tracker from './Tracker';
-function Info({cartListedCity}) {
+function Info(){
   const [isOpen, setIsOpen] = useState(false)
+  const [isClicked, setClicked] = useState(false)
+  const [mode, setMode] = useState('light-theme')
+
+  useEffect(()=>{
+    document.body.className=mode;
+  },[mode])
 
   const ClickBookMark =()=>{
     setIsOpen(!isOpen)
-    // setCart(()=>cartListedCity(el))
-    
-    console.log('OPEN')
+     console.log('OPEN')
+    //  props.cartListedCity()
+    // props.onClick([])
   }
+  const modeHandler=()=>{
+    setClicked(!isClicked)
+    if(mode==='dark-theme'){
+      setMode('light-theme')
+    }else{
+      setMode('dark-theme')
+    }
+  }
+  
 
   return (
     <div>
@@ -26,28 +40,35 @@ function Info({cartListedCity}) {
       className='bookmark'
       onClick={ClickBookMark}
       />
-      
-     
-       {/* {cartListedCity} */}
+      {/* <button onClick={isClicked===true? {modeHandler1}:{modeHandler2}}
+      style={{color:fontColor}}
+      >{isClicked? 'Light Mode' : 'Dark Mode'}
+      </button> */}
+      <a href='#' className='mode-btn active'
+      onClick={modeHandler}
+      >{isClicked? 'Light Mode' : 'Dark Mode'}</a>
       <button className='signin'>Sign In</button>
 
       </div>
       <div className={`menu ${isOpen ? 'active' : 'inactive'}`}>
           <div className='openList'>
-            {cartListedCity}
-          {/* <Tracker cartListedCity={cartListedCity}/> */}
+            {/* {props.cartData('')} */}
+            {/* <Tracker cartListedCity = {props.cartListedCity}/> */}
+            {/* {props.cartListedCity} */}
           </div>
         </div>
           
-
-      </nav>
+     </nav>
 
       <div className='home'>
 
         <div className='home_contents'>
           <p className='p1'>CORONAVIRUS</p>
-          <p>Track Your State With</p>
+          <div className='para'>
+
+          <p >Track Your State With</p>
           <p>Covid-19 Tracker</p>
+          </div>
         </div>
       </div>
     </div>

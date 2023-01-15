@@ -14,6 +14,8 @@ const Card = () => {
   }
 
   return (
+    <div className='card-container'>
+      
     <div className='card'>
 
       {/* <div className='card-btn'> */}
@@ -38,6 +40,7 @@ const Card = () => {
         <img className='card-img' src='https://images.unsplash.com/photo-1587316745621-3757c7076f7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60' alt='covid image' />
         <img className='card-img' src='https://images.unsplash.com/photo-1613796434552-319eb4997874?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGNvdmlkJTIwMTl8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60' alt='covid image' />
       </div>
+    </div>
     </div>
   )
 }

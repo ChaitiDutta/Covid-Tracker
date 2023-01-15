@@ -8,12 +8,15 @@ import Footer from './Components/Footer';
 
 function App() {
   return (
-    <div>
+    <div >
+      {/* <body className='light-theme'> */}
+
       <Info />
       <Card />
       <Tracker />
       {/* <CartList /> */}
       <Footer />
+      {/* </body> */}
     </div>
   );
 }

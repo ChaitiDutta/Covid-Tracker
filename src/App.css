@@ -12,6 +12,15 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.dark-theme {
+  --bg-clr:#111b20;
+
+  
+}
+.Light-theme {
+  --bg-clr:#fff;
+  --total-box:rgba(0, 0, 0, 0.32);
+}
 
 .App-header {
   background-color: #282c34;
