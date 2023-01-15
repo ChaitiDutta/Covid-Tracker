@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BsBookmarkCheck } from 'react-icons/bs';
+// import { BsBookmarkCheck } from 'react-icons/bs';
 import Tracker from './Tracker';
 function Info(){
   const [isOpen, setIsOpen] = useState(false)
@@ -10,12 +10,10 @@ function Info(){
     document.body.className=mode;
   },[mode])
 
-  const ClickBookMark =()=>{
-    setIsOpen(!isOpen)
-     console.log('OPEN')
-    //  props.cartListedCity()
-    // props.onClick([])
-  }
+  // const ClickBookMark =()=>{
+  //   setIsOpen(!isOpen)
+  //    console.log('OPEN')
+  // }
   const modeHandler=()=>{
     setClicked(!isClicked)
     if(mode==='dark-theme'){
@@ -36,27 +34,22 @@ function Info(){
         <p className='vid'>VID-19 TRACKER</p>
       </header>
       <div className='cart'>
-      <BsBookmarkCheck 
+      {/* <BsBookmarkCheck 
       className='bookmark'
       onClick={ClickBookMark}
-      />
-      {/* <button onClick={isClicked===true? {modeHandler1}:{modeHandler2}}
-      style={{color:fontColor}}
-      >{isClicked? 'Light Mode' : 'Dark Mode'}
-      </button> */}
+      /> */}
+     
       <a href='#' className='mode-btn active'
       onClick={modeHandler}
       >{isClicked? 'Light Mode' : 'Dark Mode'}</a>
       <button className='signin'>Sign In</button>
 
       </div>
-      <div className={`menu ${isOpen ? 'active' : 'inactive'}`}>
+      {/* <div className={`menu ${isOpen ? 'active' : 'inactive'}`}>
           <div className='openList'>
-            {/* {props.cartData('')} */}
-            {/* <Tracker cartListedCity = {props.cartListedCity}/> */}
-            {/* {props.cartListedCity} */}
+           
           </div>
-        </div>
+        </div> */}
           
      </nav>
 

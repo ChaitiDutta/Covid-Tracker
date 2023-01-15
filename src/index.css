@@ -155,12 +155,12 @@ p.no.det {
   /* rgba(0, 204, 255, 0.79) */
 }
 
-thead {
+/* thead {
 
   position: sticky;
   top: 0;
 
-}
+} */
 
 
 .table-container {
@@ -178,12 +178,14 @@ thead {
 .table-container th {
   padding: 18px 67px 20px 68px;
   background-color: rgb(95, 87, 87);
+  /* background: #565454; */
   color: white;
   /* background-color: var(--font-clr);
   color: var(--bg-clr); */
   max-width: 700px;
   min-width: 245px;
   height: auto;
+  /* position: absolute; */
   /* position: static; */
 
   /* width: 100%; */
@@ -198,6 +200,7 @@ thead {
 .table-container tr:hover {
   background-color: rgba(86, 168, 255, 0.422);
 }
+
 
 
 
@@ -243,7 +246,9 @@ padding-top: 15px;
 .menu {
   /* position:absolute; */
   /* display: contents; */
-  background: #ffffff;
+  /* background: #ffffff; */
+  background-color: rgb(254, 131, 131);
+  color: var(--font-clr);
   
   border-radius: 8px;
   position: absolute;
@@ -276,13 +281,16 @@ padding-top: 15px;
 .menu .openList {
 
   border-bottom: 1px solid #dddddd;
+  
+
 }
 
-.menu li a {
-  text-decoration: none;
+.menu table{
+  /* text-decoration: none;
   color: #333333;
   padding: 15px 20px;
-  display: block;
+  display: block; */
+  /* position: relative; */
 }
 
 .signin {
